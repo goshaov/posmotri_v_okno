@@ -112,6 +112,7 @@ input {
   justify-content: start;
   min-block-size: 101px;
   min-inline-size: 200px;
+  padding: 2px;
 }
 
 .content__video-card-thumbnail {
