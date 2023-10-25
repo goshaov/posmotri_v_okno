@@ -11,6 +11,7 @@ html {
 .page {
   display: flex;
   justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -49,7 +50,7 @@ ol {
   white-space: nowrap;
 }
 
-input {
+.search-form__textfield {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -59,34 +60,34 @@ input {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  inline-size: 100%;
 }
 
 .content {
   display: flex;
   align-items: end;
-  margin: auto;
-  max-inline-size: 1140px;
   column-gap: 30px;
+  inline-size: 1140px;
 }
 
 .search-form {
   display: flex;
   column-gap: 40px;
   align-items: start;
-  inline-size: 100%;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   row-gap: 26px;
-  block-size: 100%;
   inline-size: 100%;
+  block-size: 100%;
 }
 
 .content__list {
   position: relative;
   block-size: 298px;
+  inline-size: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,7 @@ input {
 }
 
 .result__video-container {
+  position: relative;
   inline-size: 711px;
   block-size: 386px;
   cursor: pointer;
@@ -104,21 +106,24 @@ input {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card {
   display: flex;
   align-items: start;
   justify-content: start;
-  min-block-size: 101px;
-  min-inline-size: 200px;
+  min-block-size: 103px;
+  min-inline-size: 394px;
   padding: 2px;
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
+  display: block;
+  inline-size: 100%;
   block-size: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -148,7 +153,7 @@ input {
 
 .title {
   color: #fff;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -162,7 +167,6 @@ input {
 
 .content__card-link {
   display: block;
-  margin: 2px;
   color: #fff;
   text-decoration: none;
   font-style: normal;
@@ -232,6 +236,7 @@ input {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  border: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
@@ -239,6 +244,7 @@ input {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  border: none;
 }
 
 .button {
@@ -256,13 +262,15 @@ input {
 }
 
 .search-form__submit-button {
-  inline-size: 194px;
-  block-size: 34px;
+  inline-size: 100%;
+  padding-block-start: 6px;
+  padding-block-end: 6px;
 }
 
 .more-button {
-  inline-size: 399px;
-  block-size: 34px;
+  inline-size: 100%;
+  padding-block-start: 6px;
+  padding-block-end: 6px;
 }
 
 .search-form__label:has(.search-form__label-text:focus-visible) {
@@ -274,6 +282,10 @@ input {
   text-decoration-line: underline;
 }
 
+.search-form__label:has(.search-form__checkbox):active {
+  text-decoration-line: none;
+}
+
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
@@ -281,6 +293,7 @@ input {
 
 .button:active {
   background-color: #545050;
+  text-decoration-line: none;
 }
 
 .button:hover {
@@ -289,6 +302,7 @@ input {
 
 .button:focus {
   outline: none;
+  text-decoration-line: none;
 }
 
 .button:focus-visible {
@@ -296,21 +310,22 @@ input {
   outline-offset: 2px;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
+  text-decoration-line: none;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration-line: underline;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
-.content__video-card:focus {
-  outline: none;
+.content__card-link:focus {
+  text-decoration-line: none;
 }
 
 .content__card-link_current {
@@ -320,7 +335,7 @@ input {
 .error__title {
   color: #fff;
   text-align: center;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
