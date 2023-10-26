@@ -89,7 +89,8 @@ ol {
   position: relative;
   block-size: 298px;
   inline-size: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -113,15 +114,13 @@ ol {
 .content__video-card {
   display: flex;
   align-items: start;
-  justify-content: start;
   min-block-size: 103px;
   min-inline-size: 394px;
   padding: 2px;
 }
 
 .content__video-card-thumbnail {
-  display: block;
-  inline-size: 100%;
+  inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
   object-position: center;
@@ -130,8 +129,10 @@ ol {
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   row-gap: 6px;
-  inline-size: 100%;
+  min-block-size: 103px;
+  min-inline-size: 200px;
 }
 
 .search-form__fieldset-title {
@@ -332,4 +333,3 @@ ol {
 .content__card-link_current {
   background-color: #545050;
 }
-
