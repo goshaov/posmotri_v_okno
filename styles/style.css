@@ -120,6 +120,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  display: block;
   inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
